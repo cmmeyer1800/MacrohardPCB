@@ -1,0 +1,16 @@
+#!/bin/bash
+PCB_NAME='MacrohardPCB_first'
+OUT_PATH='./Project Outputs for MacrohardPCB'
+
+cd "$OUT_PATH"
+
+wget https://raw.githubusercontent.com/brandtks/GerberRender/master/gerbrend
+
+./gerbrend -o "./$PCB_NAME.GM" -d "./$PCB_NAME.DRR" -f "./$PCB_NAME.GTL" -m "./$PCB_NAME.GTS" -s "./$PCB_NAME.GTO" -b "./$PCB_NAME.GBL" -n "./$PCB_NAME.GBS" -t "./$PCB_NAME.GBO" -r 1000
+
+cp ./front-render.png ../docs/front.png
+cp ./back-render.png ../docs/back.png
+
+rm ./front-render.png
+rm ./back-render.png
+rm ./gerbrend
