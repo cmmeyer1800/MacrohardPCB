@@ -12,4 +12,4 @@ on our TSMC 65nm RISC-V core.
 ![back](./docs/back.png)
 
 ## Current Schematic
-![Schematic](./MacroHard.pdf)
+![Schematic](./Macrohard.pdf)
